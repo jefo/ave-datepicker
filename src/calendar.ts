@@ -84,6 +84,7 @@ export class Calendar {
     onError: null,
     onRender: null,
     onRenderDay: null,
+    renderMonthName: (date) => date.toLocaleString(this.options.lang, { month: 'long' }),
     onChangeMonth: null,
     onChangeYear: null,
     onDayHover: null,
@@ -241,7 +242,7 @@ export class Calendar {
     } else {
       const monthName = document.createElement('strong');
       monthName.className = style.monthItemName;
-      monthName.innerHTML = date.toLocaleString(this.options.lang, { month: 'long' });
+      monthName.innerHTML = this.options.renderMonthName(date);
       monthAndYear.appendChild(monthName);
     }
 
@@ -359,8 +360,8 @@ export class Calendar {
       // 7 days, 4 is «Thursday» (new Date(1970, 0, 1, 12, 0, 0, 0))
       const dayIdx = 7 - 4 + this.options.firstDay + w;
       const weekday = document.createElement('div');
-      weekday.innerHTML = this.weekdayName(dayIdx);
-      weekday.title = this.weekdayName(dayIdx, 'long');
+      weekday.innerHTML = this.options.renderWeekDay ? this.options.renderWeekDay(w) : this.weekdayName(dayIdx);
+      weekday.title = this.options.weekDayName ? this.options.weekDayName(dayIdx) : this.weekdayName(dayIdx, 'long');
       weekdaysRow.appendChild(weekday);
     }
 

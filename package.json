@@ -1,6 +1,6 @@
 {
-  "name": "litepicker",
-  "version": "1.5.7",
+  "name": "ave-datepicker",
+  "version": "1.5.73",
   "description": "Date range picker - lightweight, no dependencies",
   "main": "./dist/js/main.js",
   "types": "./dist/js/index.d.ts",
@@ -26,13 +26,12 @@
     "url": "https://github.com/wakirin/litepicker.git"
   },
   "author": {
-    "name": "Rinat G.",
-    "email": "litepicker@lvl.ninja",
-    "url": "https://lvl.ninja"
+    "name": "j4jk3wka",
+    "email": "jefo.work@gmail.com"
   },
-  "homepage": "https://github.com/wakirin/litepicker#readme",
+  "homepage": "https://github.com/jefo/ave-datepicker#readme",
   "bugs": {
-    "url": "https://github.com/wakirin/litepicker/issues"
+    "url": "https://github.com/jefo/ave-datepicker/issues"
   },
   "license": "MIT",
   "dependencies": {},
